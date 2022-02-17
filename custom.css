@@ -157,7 +157,6 @@ table tr td button {
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
     border-top-right-radius: 40px;
-    width: 100px;
 }
 
 table tr td button:hover {
@@ -168,6 +167,9 @@ table tr td button:hover {
     color: rgb(28, 54, 172);
     font-family: 'Times New Roman', serif;
     font-size: 12pt;
+}
+table tr td button span {
+    display: inline-block;
     padding-bottom: 17px;
 }
 
@@ -175,19 +177,26 @@ table tr td button:hover {
     color: rgb(28, 54, 172);
     font-family: 'Times New Roman', serif;
     font-size: 12pt;
-    padding-bottom: 17px;
 }
 
 .fa-details::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: "\f303";
+    background-color: white;
+    padding: 7px;
+    margin: 3px;
+    border-radius: 50%;
 }
 
 .fa-delete::before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: "\f1f8";
+    background-color: white;
+    padding: 7px;
+    margin: 3px;
+    border-radius: 50%;
 }
 
 /* TABEL MIC */
@@ -249,13 +258,6 @@ table tr td button:hover {
 
     table tr td button span {
         display: none;
-    }
-
-    .fa-details {
-        padding-bottom: 0px;
-    }
-
-    .fa-delete {
         padding-bottom: 0px;
     }
 
@@ -264,13 +266,25 @@ table tr td button:hover {
         flex-direction: row;
     }
 
+    .fa-delete::before {
+        background-color: transparent;
+        /* padding: 3px; */
+        margin-left: -14px;
+        border-radius: 50%;
+    }
+
+    .fa-details::before {
+        background-color: transparent;
+        margin: -14px;
+        border-radius: 50%;
+    }
+
     table tr td button {
-        border-bottom-left-radius: 100%;
-        border-top-left-radius: 100%;
-        border-bottom-right-radius: 100%;
-        border-top-right-radius: 100%;
-        width: 40px;
-        border-color: #C4D9E6;
+        border-radius: 50%;
+        width: 0px;
+        padding: 10px;
+        background-color: rgb(175, 178, 199);
+        border-color: rgb(175, 178, 199);;
     }
 
 }
