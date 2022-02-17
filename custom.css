@@ -1,0 +1,306 @@
+@font-face {
+
+    font-family: 'Font Awesome 5 Free';
+    
+    font-style: normal;
+    
+    font-weight: 900;
+    
+    font-display: auto;
+    
+    src: url("webfonts/fa-solid-900.eot");
+    
+    src: url("webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+html, body {
+    width:100%;
+    height:100%;
+}
+
+#header {
+    text-align:center;
+    padding-bottom: 45px;
+    padding-top: 5px;
+    font-size: 2em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color:white;
+    background: rgb(5,0,95);
+    background: linear-gradient(90deg, rgba(5,0,95,1) 0%, rgba(56,117,208,1) 50%, rgba(5,0,95,1) 100%);
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/* MENIU */
+
+nav span {
+    display:inline-block;
+    width:100%;
+}
+
+.menu {
+    background-color: #829baa;
+    flex-grow: 1;
+}
+
+.fa {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.fa-bars::before {
+    font-size: 18pt;
+    color: rgb(28, 54, 172);;
+    content:"\f0c9";
+}
+
+.fa-users::before {
+    content:"\f007";
+}
+
+.fa-users {
+    color: rgb(28, 54, 172);
+    font-size: 16pt;
+}
+
+.fa-buy {
+    color: rgb(28, 54, 172);
+    font-size: 16pt;
+    background-color: #93a0b8;
+}
+
+.fa-buy::before {
+    content:"\f07a";
+}
+
+.menu-button:checked ~ nav span{
+    display: none;
+}
+
+.menu-button:checked ~ .fa-bars{
+    /* AR TREBUI SA SE ROTEASCA BUTONUL DE MENIU - NU SE ROTESTE */
+    transform: rotate(90deg);
+}
+
+.menu-button {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* pentru pagina index */
+
+.white-div {
+    background-color: white;
+    flex-grow:5;
+}
+
+/* pentru pagina users */
+
+.empty-table {
+    background-color: #93a0b8;
+    flex-grow:5;
+}
+
+.fa-users-Use {
+    color: rgb(28, 54, 172);
+    font-size: 16pt;
+    background-color: #93a0b8;
+}
+
+.fa-users-Use::before {
+    content:"\f007";
+}
+
+/* pentru index si users */
+
+.fa-buy-indUse {
+    color: rgb(28, 54, 172);
+    font-size: 16pt;
+    background-color: transparent;
+}
+
+.fa-buy-indUse::before {
+    content:"\f07a";
+}
+
+/* TABEL */
+
+.table-content {
+    flex-grow: 5;
+}
+
+table {
+    background-color: #93a0b8;
+}
+
+table tr td{
+    background-color: white;
+}
+
+table tr:nth-child(2n + 1) td {
+    background-color: #a3c6dd;
+}
+
+/* BUTOANE TABEL */
+
+table tr td button {
+    background-color: #C4D9E6;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 100px;
+}
+
+table tr td button:hover {
+    background-color: grey;
+}
+
+.fa-details {
+    color: rgb(28, 54, 172);
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+    padding-bottom: 17px;
+}
+
+.fa-delete {
+    color: rgb(28, 54, 172);
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+    padding-bottom: 17px;
+}
+
+.fa-details::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f303";
+}
+
+.fa-delete::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f1f8";
+}
+
+/* TABEL MIC */
+
+.small-table {
+    display: none;
+}
+
+.small-table-content {
+    position: relative;
+    border: 2px solid;
+    margin: 7px;
+    padding: 7px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.small-buttons {
+    top: 5px;
+    right: 15px;
+    position: absolute;
+}
+
+.small-details {
+    border-radius: 100%;
+    background-color: #C4D9E6;
+    border-color: #C4D9E6;
+}
+
+.small-delete {
+    border-radius: 100%;
+    background-color: #C4D9E6;
+    border-color: #C4D9E6;
+}
+
+.small-details::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color:rgb(28, 54, 172);
+    content: "\f303";
+}
+
+.small-delete::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color:rgb(28, 54, 172);
+    content: "\f1f8";
+}
+
+.small-table div:nth-child(2n){
+    background-color: #a3c6dd;
+}
+
+/* DIFERITE WIDTH - URI */
+
+@media all and (max-width: 730px) {
+
+    table tr td button span {
+        display: none;
+    }
+
+    .fa-details {
+        padding-bottom: 0px;
+    }
+
+    .fa-delete {
+        padding-bottom: 0px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    table tr td button {
+        border-bottom-left-radius: 100%;
+        border-top-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        border-top-right-radius: 100%;
+        width: 40px;
+        border-color: #C4D9E6;
+    }
+
+}
+
+@media all and (max-width: 600px) {
+
+    .page {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    table {
+        display:none;
+    }
+
+    .small-table {
+        display:flex !important;
+        flex-direction: column;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+@media all and (max-width: 550px) {
+
+    b {
+        display: none;
+    }
+}
